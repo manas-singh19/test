@@ -1,0 +1,126 @@
+@import "config";
+@import "common";
+
+html,
+body {
+    background: map-get($bg-color,pre_color);
+    min-height: 100vh;
+    height: max-content;
+    font-family: custom;
+    user-select: none;
+    color: #FFF;
+    position: relative;     
+}
+
+header{
+	height:12vh;
+	position: fixed;	
+	background: map-get($bg_color,pre2_color);
+
+
+
+	.trigger-menu-wrapper {
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  display: flex;
+	  justify-content:space-between;
+	  padding: 20px;
+	  z-index: 2;
+	  background:inherit;
+	  transition: transform 0.4s;
+	  z-index: 20;
+		.trigger-menu {
+		  display: flex;
+		  align-items: center;
+		  font-size: 1.3rem;;
+		  letter-spacing: .2em;	  
+		  }
+			.desktopMenu{
+			  width: 80%;
+			  height: 50px;
+			  @include flex-box(row,flex-end,center); 			 
+				ul {  
+					  padding: 0;				      
+				      margin: 0;
+					  text-align: right;
+					  margin: 0;
+					  padding-right: 40px;				      
+				      transition: 1s;
+						li {
+					      display: inline-block;
+					       padding: 10px 20px;					      
+							a {						
+							font-size: 16px;
+							}
+							.resume {
+								padding: 14px 26px;
+							}
+					    }
+					}
+			}		
+	}
+		.menu {
+		  min-width: 60%;
+		  background: map-get($bg_color,pre2_color);
+		  position: fixed;
+		  top:0;
+		  left:40%;
+		  right: 0;
+		  bottom: 0;
+		  display: none;
+		  text-align: center;
+		  padding: 15vh 0 5vh;
+		  overflow-x:hidden;
+		  z-index:1;		  
+		  	li{ 		  		
+		  		margin: 50px 0px;
+		  		padding: 10px 0px;		  		
+		  		a{	  		
+		  		font-size: 1.2rem;
+		  		padding: 24px 36px;		  		
+		  		}		  		
+			}
+		}
+}
+
+
+main{
+	height:200vh;
+	background: map-get($bg_color,pre_color);	
+}
+footer{
+	height: 20vh;
+	
+	background: map-get($bg_color,pre2_color);		
+}
+
+@media (max-width:639px){ //means below 640
+	header nav .trigger-menu-wrapper .desktopMenu{
+		display: none;
+	}	
+}
+
+@media (min-width: 640px){ // means above 640
+	.menu-open {
+	  overflow:visible;
+	}
+	.menu-open .page-header .menu {
+	  display: none;
+	}
+	header nav .trigger-menu-wrapper .trigger-menu{
+		display: none;
+	}
+	
+	header nav .trigger-menu-wrapper .desktopMenu{
+		font-size: 12px;
+		color: green;
+
+		ul{
+			padding-right: 10px;	
+		}
+	}
+
+
+}

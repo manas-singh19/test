@@ -1,0 +1,195 @@
+@font-face {
+  font-family: custom;
+  src: url("../font/HelveticaNeueMedium.ttf"); }
+@font-face {
+  font-family: customlight;
+  src: url("../font/HelveticaNeueLight.ttf"); }
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none; }
+
+ul {
+  list-style: none; }
+
+html {
+  scroll-behavior: smooth; }
+
+input:focus {
+  outline: none; }
+
+input:active {
+  outline: none; }
+
+textarea:focus {
+  outline: none; }
+
+.no-img {
+  background: linear-gradient(180deg, #6971EE 0%, #454DBE 100%);
+  border-radius: 2px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+p {
+  color: #FFF;
+  font-family: custom;
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: #FFF;
+  font-family: customlight;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+  text-decoration: none; }
+
+span {
+  font-family: customlight;
+  color: #fff; }
+
+.box-shadow {
+  -webkit-box-shadow: 0 10px 6px -6px #08090f;
+  -moz-box-shadow: 0 10px 6px -6px #08090f;
+  box-shadow: 0 10px 6px -6px #08090f; }
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none; }
+
+.resume {
+  color: #61FFF6;
+  padding: 24px 36px;
+  background: rgba(97, 255, 246, calc(0.05));
+  border: 1px solid rgba(97, 255, 246, 0.5);
+  transition: 350ms ease;
+  cursor: pointer; }
+  .resume:hover {
+    border: 1px solid #61FFF6;
+    box-shadow: 0px 4px 20px rgba(97, 255, 246, 0.1);
+    background: rgba(97, 255, 246, 0.15); }
+
+.menu-open {
+  overflow: hidden; }
+
+.menu-open .trigger-menu-wrapper {
+  background: transparent; }
+
+.menu-open .page-header .menu {
+  display: block; }
+
+.scroll-down .trigger-menu-wrapper {
+  transform: translate3d(0, -100%, 0); }
+
+.scroll-up .trigger-menu-wrapper {
+  transform: none; }
+
+.scroll-up .trigger-menu-wrapper {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35); }
+
+html,
+body {
+  background: #0a192f;
+  min-height: 100vh;
+  height: max-content;
+  font-family: custom;
+  user-select: none;
+  color: #FFF;
+  position: relative; }
+
+header {
+  height: 12vh;
+  position: fixed;
+  background: #020c1b; }
+  header .trigger-menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 2;
+    background: inherit;
+    transition: transform 0.4s;
+    z-index: 20; }
+    header .trigger-menu-wrapper .trigger-menu {
+      display: flex;
+      align-items: center;
+      font-size: 1.3rem;
+      letter-spacing: .2em; }
+    header .trigger-menu-wrapper .desktopMenu {
+      width: 80%;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center; }
+      header .trigger-menu-wrapper .desktopMenu ul {
+        padding: 0;
+        margin: 0;
+        text-align: right;
+        margin: 0;
+        padding-right: 40px;
+        transition: 1s; }
+        header .trigger-menu-wrapper .desktopMenu ul li {
+          display: inline-block;
+          padding: 10px 20px; }
+          header .trigger-menu-wrapper .desktopMenu ul li a {
+            font-size: 16px; }
+          header .trigger-menu-wrapper .desktopMenu ul li .resume {
+            padding: 14px 26px; }
+  header .menu {
+    min-width: 60%;
+    background: #020c1b;
+    position: fixed;
+    top: 0;
+    left: 40%;
+    right: 0;
+    bottom: 0;
+    display: none;
+    text-align: center;
+    padding: 15vh 0 5vh;
+    overflow-x: hidden;
+    z-index: 1; }
+    header .menu li {
+      margin: 50px 0px;
+      padding: 10px 0px; }
+      header .menu li a {
+        font-size: 1.2rem;
+        padding: 24px 36px; }
+
+main {
+  height: 200vh;
+  background: #0a192f; }
+
+footer {
+  height: 20vh;
+  background: #020c1b; }
+
+@media (max-width: 639px) {
+  header nav .trigger-menu-wrapper .desktopMenu {
+    display: none; } }
+@media (min-width: 640px) {
+  .menu-open {
+    overflow: visible; }
+
+  .menu-open .page-header .menu {
+    display: none; }
+
+  header nav .trigger-menu-wrapper .trigger-menu {
+    display: none; }
+
+  header nav .trigger-menu-wrapper .desktopMenu {
+    font-size: 12px;
+    color: green; }
+    header nav .trigger-menu-wrapper .desktopMenu ul {
+      padding-right: 10px; } }
+
+/*# sourceMappingURL=main.css.map */

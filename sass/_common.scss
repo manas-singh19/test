@@ -1,0 +1,24 @@
+//mobile menu 
+.menu-open {
+  overflow: hidden;   
+}
+.menu-open .trigger-menu-wrapper {
+  background: transparent;  
+}
+.menu-open .page-header .menu {
+  display: block;
+}
+
+
+//scrolling effect property
+.scroll-down .trigger-menu-wrapper {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up .trigger-menu-wrapper {
+  transform: none;
+}
+
+.scroll-up .trigger-menu-wrapper {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+}
